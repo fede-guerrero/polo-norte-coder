@@ -1,0 +1,712 @@
+/* reset */
+*                           {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    background-image: url(../img/backg-nieve.jpg);
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url(../img/polo-head.jpeg);
+    background-size: contain;    
+}
+
+/* Logo */
+header img{ 
+    height: 150px; width: auto;
+    
+}
+
+/* Titulos HEADER */
+h1{
+    font-family: 'Koulen', cursive;
+    font-size: 60px;
+    text-align: center;
+}
+
+.title h2{
+    font-family: 'Koulen', cursive;
+    font-size: 30px;
+    text-align-last: center;
+}
+
+.redes i{
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background: white; 
+    text-align: center;
+    padding-top: 5px;
+    font-size: 22px;  
+}
+ 
+.redes a{
+    text-decoration: none;
+    color: black;
+}
+
+.redes a:hover{
+    color: red;  
+} 
+
+/* modificaciones Barra NAV */
+.menu{
+    display: none;
+}
+nav { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 40px;
+    background-color: #225EA3;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+ul {
+    width: 70%;
+    margin-left: 5%;
+    font-family: 'koulen', cursive;
+    font-size: larger;
+    list-style: none;
+}
+
+li{
+    display: inline-block;
+    width: 20%;
+    color: #D3E1F2;
+}
+
+li a{
+    text-decoration: none;
+    color: #D3E1F2;
+}
+
+li a:hover{
+    color:red
+}
+
+ul ul{
+    width: 15%;
+    padding: auto 70px;
+    position: absolute;
+    display: none;
+    background-color: #225EA3;
+    z-index: 2;
+}
+
+ul ul li{
+    display: block;
+    padding-inline: 20px;
+}
+
+ul li:hover ul{
+    display: block;
+}
+/* boton busqueda y carrito */
+.boton{
+    margin-top: 4px;
+    margin-right: 10px;
+}
+.boton i{
+    height: 30px;
+    width: 30px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background: white; 
+    text-align: center;
+    padding-top: 3px;  
+}
+.boton a{
+    text-decoration: none;
+    color: black;
+}
+.boton a:hover{
+    color: red;  
+}
+.boton input{
+    border: 3px solid black;
+    border-radius: 5px;
+    background: white; 
+
+} 
+/* desfile productos tipo carrusel */
+marquee img{
+    position: relative;
+    z-index: 1;
+    height: 200px;
+    width: 200px;
+    margin: 10px 60px;
+    border: 5px solid #225EA3;
+    border-radius: 15px;
+}
+
+/* titulos H2 en general */
+h2{
+ 
+    font-family: 'Koulen', cursive;
+    font-size: 9vh;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* articles */
+article p{
+    font-size: 19px;
+    border: 10px solid #225EA3;
+    border-radius: 15px;
+    background-image: radial-gradient(rgba(102, 195, 226, 0.753), rgba(255, 255, 255, 0.87));
+    margin: 10px 50px 50px;
+}
+/* video youtube home y servicios FLEX */
+.iframe-vid{
+    margin-top: 1%;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    width: 100vh;
+}
+/* tabla sucursales GRID */
+.sucursal{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas:
+        "h2 h2"
+        "tabla mapa"
+        "tabla mapa";
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    margin-bottom: 25px ;
+    margin-inline: 40px;
+}
+
+.sucursal h2{
+    grid-area: h2;
+}
+
+.tabla{
+    grid-area: tabla;
+    text-align: center;
+    border: 5px dashed #225EA3;
+    border-radius: 15px;
+    background-image: radial-gradient(rgba(102, 195, 226, 0.753), rgba(255, 255, 255, 0.87));
+}
+.mapa{
+    background-image: url(../img/back-ubicacion.jpeg);
+    background-position: center;
+    background-size:cover;
+    border-radius: 15px;
+    grid-area: mapa;
+    height: 400px ;
+    width: 100vh;
+    overflow: hidden;
+}
+#map1, #map2, #map3, #map4{
+    border-radius: 15px;
+    position: absolute;
+    display: none;
+}
+#map1:target, #map2:target, #map3:target, #map4:target{
+    display: block;
+}
+
+
+                                    /* PAGINA DE SERVICIO */
+/* boton de contacto */
+.bot_contacto{
+    height: 50px;
+    width: auto;
+    padding-inline: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background: white; 
+    text-align: center;
+    font-size: 25px;
+    font-family: 'koulen', cursive;  
+    display: inline;
+    margin-left: 20px;
+}
+.bot_contacto a{
+    color: black;
+    text-decoration: none;
+}
+.bot_contacto a:hover{
+    color: red;
+}
+
+.galeria{
+    margin-inline: auto;
+    height: 80%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "img1 img1 img2 img3"
+    "img4 img4 img4 img3"
+    "img5 img6 img6 img6"
+    "img5 img7 img7 img7";
+    gap:5px;
+    border: 10px solid #225EA3;
+    border-radius: 10px;
+    background-image: radial-gradient(rgba(102, 195, 226, 0.753), rgba(255, 255, 255, 0.87));
+    margin-bottom: 15px;
+}
+.img1{
+    grid-area: img1;
+    height: 300px;
+    background-image: url(../img/salmon1.png);
+    background-position: center;
+    background-size: cover;
+}
+.img2{
+    grid-area: img2;
+    height: 300px;
+    background-image: url(../img/viejo-confrio.jpg);
+    background-position: 25%;
+    background-size:cover;
+}
+.img3{
+    grid-area: img3;
+    height: 606px;
+    background-image: url(../img/l.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img4{
+    grid-area: img4;
+    height: 300px;
+    background-image: url(../img/almacen.jpg);
+    background-position:center;
+    background-size: cover;
+}
+.img5{
+    grid-area: img5;
+    background-image: url(../img/alimentos-congelados.jpg);
+    height: 606px;
+    background-position: center;
+    background-size: cover;
+}
+.img6{
+    grid-area: img6;
+    height: 300px;
+    background-image: url(../img/salmon2.jpg);
+    background-size:cover;
+}
+.img7{
+    grid-area: img7;
+    height: 300px;
+    background-image: url(../img/cadena-frio.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* PAGINA CONTACTO */
+/* subtitulos h3 */
+h3{
+    font-family: 'koulen', cursive;
+    font-size: 6vh;
+    text-align: center;
+}
+.preg a{
+    color: black;
+    text-decoration: none;
+}
+.pagos-img{
+    display: inline-block;
+    margin-inline: 20%;
+}
+/* modificaciones formulario */
+form{
+    display: grid;
+    grid-template-columns: 40vh 60vh;
+    justify-content: center;
+}
+fieldset{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    border: 5px solid #225EA3;
+    height: 400px;
+    width: 700px;
+    font-size: 32px;
+    font-family: 'koulen', cursive;
+    text-align: center;
+    margin-inline: 50%;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-con{
+    margin: 10px;
+   
+}
+textarea{
+   
+    height: 250px;
+    width: 300px;
+}
+                                /* PAGINA PRODUCTOS  */
+main{
+    padding-top:30px;
+    padding-inline: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+}
+.prod{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 5px;
+    border: 5px solid #225EA3;
+    border-radius: 10px;
+    background-image: radial-gradient(rgba(102, 195, 226, 0.753), rgba(255, 255, 255, 0.87));
+}
+
+.prod img{
+    align-self: center;
+    height: 58%;
+    width: 70%;
+    border-radius: 10px;
+}
+
+.prod input{
+    margin-top: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 25px;
+    width: 30%;
+    
+}
+
+                                                /* foter */
+footer{
+    position: relative;
+    background-color: #225EA3;
+    text-decoration: solid black;
+    text-align: center;
+    color: #D3E1F2;
+}
+
+footer a{
+    color: #D3E1F2;
+    display: inline;
+    text-decoration: underline solid red;
+    width: 25%;
+}
+
+footer img{
+    height: 50px; width: auto;
+    display: inline;
+    position: relative;
+    
+}
+
+@media only screen and (max-width:480px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr 2fr 40px;
+    }
+    header img{
+        grid-column: 1/3;
+        height: 100px;
+    }
+    .title{
+        grid-column: 2/3;
+    }
+    h1{
+        font-size: 45px;
+    }
+    .title h2{
+        font-size: 15px;
+    }
+
+
+/* BOTONES REDES */
+    .redes{
+    grid-column: 3/3; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    }
+    .redes i{
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background: white; 
+    text-align: center;
+    padding-top: 3px;
+    font-size: 18px;  
+    }
+ 
+    .redes a{
+    text-decoration: none;
+    color: black;
+    }
+
+    .redes a:hover{
+    color: red;  
+    } 
+
+    /* HAMBURGUESA RUSTICO!! */
+    .nav ul,li{
+        display:none;
+    }
+    
+    .menu{
+        margin-top: 4px;
+        margin-left: 10px;
+        display: block;
+    }
+    #princip{
+        display:none;
+    }
+    ul {
+        background-color: #225EA3;
+        width: 120px;
+        padding-left: 15px;
+        margin-left: 5%;
+        font-family: 'koulen', cursive;
+        font-size: larger;
+        list-style: none;
+    }
+    
+    li{
+        display: inline-block;
+        width: 20%;
+        color: #D3E1F2;
+    }
+    
+    li a{
+        text-decoration: none;
+        color: #D3E1F2;
+    }
+    
+    li a:hover{
+        color:red
+    }
+    
+    ul ul{
+        width: 130px;
+        position: absolute;
+        display: block;
+        background-color: #225EA3;
+        z-index: 2;
+    }
+    
+    ul ul li{
+        display: block;
+        padding-inline: 20px
+    }
+    
+    ul li:target ul{
+        display: block;
+    }
+    
+    #princip:target{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu i{
+        height: 30px;
+        width: 30px;
+        border: 3px solid black;
+        border-radius: 10px;
+        background: white; 
+        text-align: center;
+        padding-top: 3px;  
+    }
+    .menu a{
+        text-decoration: none;
+        color: black;
+    }
+    .menu a:hover{
+        color: red;  
+    }
+    article p{
+    margin:0;
+    height: 70vh;
+    width: 100%;
+    overflow: auto;
+    }
+/* TABLA Y MAPAS HOME */
+    .sucursal{
+    display:flex;
+    flex-direction: column;
+    }
+    .mapa{
+    width: 100%;
+    }
+    #map1, #map2, #map3, #map4{
+    width: 400px;
+    }
+
+    /* PRODUCTOS RESP */
+
+    main{
+        padding-top:10px;
+        padding-inline: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .prod{
+        display: grid;
+        justify-items: center;
+        align-items: stretch;
+        grid-template-columns: 43% 57%;
+        grid-template-rows: 1fr 2fr 1fr;
+        
+        border: 5px solid #225EA3;
+        border-radius: 10px;
+        background-image: radial-gradient(rgba(102, 195, 226, 0.753), rgba(255, 255, 255, 0.87));
+    }
+
+    .prod h3{
+        grid-column: 2/2;
+        grid-row: 1/3;
+    }
+    .prod p{
+        grid-column: 2/2;
+        grid-row: 2/3;
+    }
+     .prod img{
+        grid-column: 1/2;
+        grid-row: 1/4;
+        height: 220px;
+        width: 180px;
+     }
+     .prod input{
+        display: flex;
+        flex-direction: column;
+        grid-column: 2/3;
+        grid-row: 3/3;
+        height: 25px;
+        width: 60%;
+     }
+     .prod label{
+        display: none;
+     }
+    /*CONTACTO RESPONS  */
+     .preg p{
+        display: none;
+    }
+     .preg a{
+        color: black;
+        text-decoration: none;
+    }
+     .preg a:hover{
+        color: red;
+    }
+    #preg1:target, #preg2:target, #preg3:target, #preg4:target {
+       display: block;
+    }
+    #preg3{
+        height: 70vh;
+        overflow: auto;
+    }
+    .pagos-img{
+        margin: 0;
+        width: 80vh;
+    }
+
+    /* FORMULARIO */
+    form{
+        display: block;
+    }
+    fieldset {
+        margin: 2%;
+        height: 100vh;
+        width: 80vh;
+        border: 5px solid #225EA3;
+        font-size: 20px;
+        font-family: 'koulen', cursive;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    textarea {
+        height: 250px;
+        width: 70VH;
+    }
+    /* GALERIA SERVICIOS */
+    .galeria{
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "img1 img1 img3"
+        "img4 img4 img4"
+        "img5 img6 img6"
+        "img5 img2 img2"
+        "img7 img7 img7";
+    gap: 5px;
+    border: 10px solid #225EA3;
+    border-radius: 10px;
+    background-image: radial-gradient(rgba(102, 195, 226, 0.753), rgba(255, 255, 255, 0.87));
+    margin-top: 10px;
+    }
+    .img{
+        height: 200px;
+    }
+    .img5{
+        height: 404px;
+    }
+    
+}
+@media only screen and (max-width: 768px) {
+    ul{
+        width:60%;
+    }
+    .sucursal{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mapa{
+        width: 100%;
+    }
+    /* parte contacto */
+    .pagos-img{
+        width: 100%;
+        margin: 0%;
+    }
+    form{
+        justify-content: start;
+    }
+    fieldset{
+        margin-inline: 10%;
+    }
+    /*  PRODUCTOS */
+    h3{
+        font-size: 4vh;
+    }
+    h2{
+        font-size: 8vh;
+    }
+    main{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+}
+    
