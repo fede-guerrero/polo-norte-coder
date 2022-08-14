@@ -15,8 +15,18 @@ header{
     justify-content: space-between;
     background-image: url(../img/polo-head.jpeg);
     background-size: contain;    
+    animation-duration: 1s;
+    animation-name: aparecer-head;
 }
-
+@keyframes aparecer-head{
+    0%{
+        transform: translatey(-100%);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 /* Logo */
 header img{ 
     height: 150px; width: auto;
@@ -53,8 +63,10 @@ h1{
     color: black;
 }
 
-.redes a:hover{
-    color: red;  
+.redes i:hover{
+    color: red;
+    transform: scale(1.2); 
+    background-image: radial-gradient(rgba(102, 195, 226, 0.753), rgba(255, 255, 255, 0.87)); 
 } 
 
 /* modificaciones Barra NAV */
@@ -70,8 +82,19 @@ nav {
     position: sticky;
     top: 0;
     z-index: 2;
+    margin-bottom: 5px;
+    animation-name: aparecer-nav;
+    animation-duration: 1.3s;
 }
-
+@keyframes aparecer-nav{
+    0%{
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 ul {
     width: 70%;
     margin-left: 5%;
@@ -92,7 +115,7 @@ li a{
 }
 
 li a:hover{
-    color:red
+    color:red;
 }
 
 ul ul{
@@ -130,8 +153,9 @@ ul li:hover ul{
     text-decoration: none;
     color: black;
 }
-.boton a:hover{
-    color: red;  
+.boton i:hover{
+    color: red;
+    transform: scale(1.2);  
 }
 .boton input{
     border: 3px solid black;
@@ -140,6 +164,9 @@ ul li:hover ul{
 
 } 
 /* desfile productos tipo carrusel */
+marquee{
+    padding-bottom: 7px;
+}
 marquee img{
     position: relative;
     z-index: 1;
@@ -148,6 +175,12 @@ marquee img{
     margin: 10px 60px;
     border: 5px solid #225EA3;
     border-radius: 15px;
+    transition: 0.5s;
+}
+marquee img:hover{
+    border: 10px double #485aff ;
+    transform:scale(1.1);
+    box-shadow: 10px 15px rgba(0, 0, 0, 0.534);
 }
 
 /* titulos H2 en general */
@@ -157,6 +190,16 @@ h2{
     font-size: 9vh;
     text-align: center;
     text-decoration: underline;
+    animation-name: sacudida;
+    animation-duration: 1.5s;
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+}
+@keyframes sacudida{
+  10%,30%,50%,70%,90%{transform: translateX(-20px);
+}
+  20%,40%,60%,80%,100%{ transform: translateX(20px);
+}
 }
 
 /* articles */
@@ -209,7 +252,7 @@ iframe{
     background-size:cover;
     border-radius: 15px;
     grid-area: mapa;
-    height: 400px ;
+    height: 450px;
     width: 100vh;
     overflow: hidden;
 }
@@ -262,10 +305,19 @@ iframe{
     border: 10px solid #225EA3;
     border-radius: 10px;
     background-image: radial-gradient(rgba(102, 195, 226, 0.753), rgba(255, 255, 255, 0.87));
-    margin-bottom: 15px;
-}
-.img1{
-    grid-area: img1;
+    margin-bottom: 15px;}
+    .img{
+        filter: sepia(100%);
+        transition: .5s;
+    }
+    .img:hover{
+        transform: scale(1.1);
+        filter: sepia(0%);
+        border-radius: 15px;
+        z-index: 1;
+    }
+    .img1{
+        grid-area: img1;
     height: 300px;
     background-image: url(../img/salmon1.png);
     background-position: center;
@@ -319,6 +371,20 @@ h3{
     font-family: 'koulen', cursive;
     font-size: 6vh;
     text-align: center;
+    animation-name: helicoptero;
+    animation-duration: 4s;
+}
+@keyframes helicoptero{
+    0%{
+        transform: scale(1.1);
+        transform: translateX(-100%);
+    }
+    40%{
+        transform: translateX(0%);
+        transform:rotatez(1150deg);
+    }
+
+
 }
 .preg a{
     color: black;
@@ -344,7 +410,7 @@ fieldset{
     font-size: 32px;
     font-family: 'koulen', cursive;
     text-align: center;
-    margin-inline: 50%;
+    margin-inline: 10%;
 }
 .inputs{
     display: flex;
@@ -368,6 +434,19 @@ main{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
     grid-gap: 30px;
+}  
+.prod{
+    animation-duration: 3s;
+    animation-name: aparecer;
+    }
+@keyframes aparecer{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .prod{
     display: flex;
