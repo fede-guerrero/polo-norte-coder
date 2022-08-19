@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>polo norte</title>
     <link rel="shortcut icon" href="img/polo-logo-mini.png">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,19 +16,20 @@
 </head>
 
 <body>
-    <header>
-        
+    <header class="container-fluid row">    
     <!-- LOGO -->
-    <a href="#"> <img src="./img/polo-logo-mini.png"> </a>
+    <div class="col-4">
+        <a href="#"> <img src="./img/polo-logo-mini.png"> </a>
+    </div>
     
     <!-- TITULOS -->
-    <div class="title">
+    <div class="title col-4 text-center justfy-center">
         <h1> polo norte </h1>
         <h2> alimentos congelados</h2>
     </div>
     
     <!-- BOTON REDES -->
-    <div class="redes">
+    <div class="redes col-4 text-end">
         
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -38,70 +39,100 @@
     </header>
 
     <!--barra de navegacion con areas principales de la pagina y menu desplegable en productos-->
-    <nav class="nav">
-        <ul>
-            <li><a href="#"> Home</a>
-            <li> <a href="">Productos</a>
-                <ul>
-                    <li><a href="./paginas/mariscos.html">Mariscos</a></li>
-                    <li><a href="./paginas/pescados.html">Pescados</a></li>
-                    <li><a href="./paginas/rebozados.html">Rebozados</a></li>
-                    <li><a href="./paginas/fruta.html">Fruta</a></li>
-                </ul>
-            </li>
-            <li><a href="./paginas/servicios.html">Servicios</a></li>
-            <li><a href="./paginas/contacto.html">Contactanos</a></li>
-        </ul>
-
-<!-- HAMBURG RESPONSIVE -->
-        <div class="menu">
-            <a href="#princip">
-                <i class="fa-solid fa-bars"></i>
-            </a>
-            <ul id="princip">
-                <li><a href="#"> Home</a>
-                <li> <a>Productos</a>
-                    <ul>
-                        <li><a href="./paginas/mariscos.html">Mariscos</a></li>
-                        <li><a href="./paginas/pescados.html">Pescados</a></li>
-                        <li><a href="./paginas/rebozados.html">Rebozados</a></li>
-                        <li><a href="./paginas/fruta.html">Fruta</a></li>
-                    </ul>
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
                 </li>
-                <li><a href="./paginas/servicios.html">Servicios</a></li>
-                <li><a href="./paginas/contacto.html">Contactanos</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Productos
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./paginas/mariscos.html">Mariscos</a></li>
+                    <li><a class="dropdown-item" href="./paginas/pescados.html">Pescados</a></li>
+                    <li><a class="dropdown-item" href="./paginas/rebozados.html">Rebozados</a></li>
+                    <li><a class="dropdown-item" href="./paginas/fruta.html">Fruta</a></li>
+                </li>
+                </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="./paginas/servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./paginas/contacto.html">Contacto</a>
+              </li>
             </ul>
+          </div>
         </div>
+            <div class="container-fluid justify-content-end">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="boton" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="boton"><i class="fa-solid fa-cart-shopping"></i></button>
+              </form>
+            </div>
+      </nav>
 
-        <!-- barra buscadora y carrito -->
-        <div class="boton">
-            <input type="site-search" placeholder="buscar"> 
-            <a href="#"> <i class="fa-solid fa-magnifying-glass"></i> </a>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>  
+    <!-- carrusel posta boost -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
-    </nav>
-    
-    <!-- decoracion tipo carrusel -->
-    <marquee behavior="" direction="center">
-        <a href="./paginas/pescados.html"><img src="./img/dorado.jpeg"></a>
-        <a href="./paginas/mariscos.html"><img src="./img/camaron.jpeg"></a>
-        <a href="./paginas/pescados.html"><img src="./img/zurubi.jpeg"></a>
-        <a href="./paginas/mariscos.html"><img src="./img/rabas.jpeg"></a>
-    </marquee>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/alimentos-congelados.jpg" class="d-block w-100 img-fluid" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/fabrica.jpg" class="d-block w-100 img-fluid" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/control.jpg" class="d-block w-100 img-fluid" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/cadena-frio.jpg" class="d-block w-100 img-fluid" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <section class="container-fluid">
+        <div class="row">
 
-    <marquee behavior="scroll" direction="right">
-        <a href="./paginas/fruta.html"><img src="./img/frutilla.jpeg"></a>
-        <a href="./paginas/rebozados.html"><img src="./img/patitas.jpeg"></a>
-        <a href="./paginas/fruta.html"><img src="./img/durazno.jpeg"></a>
-        <a href="./paginas/rebozados.html"><img src="./img/finas-hierbas.jpeg"></a>
-    </marquee>
+            <!-- nueva seccion de productos vendidos (?) -->
+        <aside class=" topventa d-flex flex-column col-3">
+        <h3>Mas vendidos</h3>
+              <a href="./paginas/pescados.html"><img src="./img/dorado.jpeg" class="img-fluid"></a>
+              <a href="./paginas/mariscos.html"><img src="./img/camaron.jpeg" class="img-fluid"></a>
+              <a href="./paginas/fruta.html"><img src="./img/frutilla.jpeg" class="img-fluid"></a>
+              <a href="./paginas/rebozados.html"><img src="./img/patitas.jpeg" class="img-fluid"></a>
+      </aside>
 
-    <br> <br>
-
-    <section>
-        <!--descripcion de la empresa y trayectoria-->
-        <h2> sobre nosotros</h2>
-        <article class="home1">
+      <!--descripcion de la empresa y trayectoria-->
+      <article class="home1 d-flex flex-column col-9">
+      <h2> sobre nosotros</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In modi deserunt voluptas corporis recusandae,
                 reprehenderit odit sit cum nesciunt, minima molestiae porro delectus? Commodi alias, iste itaque
                 voluptates veritatis ex.
@@ -137,30 +168,31 @@
                 maiores eaque? Accusamus quod magni velit quisquam. Perferendis nemo, laboriosam ipsum sed aut
                 similique. Laudantium eaque recusandae at similique dolore quisquam doloribus possimus dolorem tenetur
                 molestias optio quia odit, dicta amet ad! Adipisci ratione sunt animi.</p>
-        </article>
-        <hr>
-        <!--video proceso industrial-->
-        <article class="iframe-vid">
-            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/JWrYzq1yGZo"
+                <!--video proceso industrial-->
+                
+                <iframe class="vid-industria align-self-center" src="https://www.youtube.com/embed/JWrYzq1yGZo"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-        </article>
+            </article>    
+        </div>
+    
         <!--distintas sucursales NOA en un cuadro con ubicacion-->
-        <hr>
+        <article class="sucursal container-fluid row">
 
-        <article class="sucursal">
-            <h2 class="h2-suc">Sucursales NOA</h2>
-            <table border="2" cellspacing="10" cellpading="10" class="tabla">
-                <tr>
-                    <th>Salta</th>
-                    <th>Jujuy</th>
-                    <th>Tucuman</th>
-                    <th>Catamarca</th>
-                </tr>
-                <tr>
-                    <td>Salta capital</td>
-                    <td>San pedro</td>
+            <h2>Sucursales NOA</h2>
+            <div class="col-3">
+
+                <table cellspacing="10" cellpading="10" class="table table-info">
+                    <tr>
+                        <th>Salta</th>
+                        <th>Jujuy</th>
+                        <th>Tucuman</th>
+                        <th>Catamarca</th>
+                    </tr>
+                    <tr>
+                        <td>Salta capital</td>
+                        <td>San pedro</td>
                     <td>Lules</td>
                     <td>San fernando</td>
                 </tr>
@@ -171,24 +203,24 @@
                     <td><a href="#map3">RP301 km 20</a></td>
                     <td><a href="#map4">Enrique ocampo 3100</a></td>
                 </tr>
-            </table>
-           
-            <div class="mapa">
+                </table>
+            </div>
+            
+            <div class="mapa col-6 offset-2">
                 <iframe class="mapa" id="map1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.3727840117704!2d-65.4238818!3d-24.7826855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc3b5b8cb1b3f%3A0x866001f47762bebb!2sLeguizam%C3%B3n%201570%2C%20Salta!5e0!3m2!1ses-419!2sar!4v1659707469951!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 <iframe class="mapa" id="map2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3638.17944599156!2d-64.8841439!3d-24.235501799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941a5813731ae84d%3A0x1f51b496af0ee97!2sAv.%207%20De%20Noviembre%2C%20Jujuy!5e0!3m2!1ses-419!2sar!4v1659811774423!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
                 
                 <iframe class="mapa" id="map3" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7114.939824309661!2d-65.33345959414301!3d-26.92031346445156!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942245b4394b1f5d%3A0x8083c7fc5c68f9fd!2sAlif%20Agro%20-%20Oficinas%2C%20Industria%20IQF%20y%20Centro%20Log%C3%ADstico!5e0!3m2!1ses-419!2sar!4v1659815156846!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
+                
                 <iframe class="mapa" id="map4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.3184778238324!2d-65.82244285980222!3d-28.469953999353258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94242868aadba79f%3A0xfbaa953d371d6a!2sAv.%20Enrique%20Ocampo%203100%2C%20San%20Fernando%20del%20Valle%20de%20Catamarca%2C%20Catamarca!5e0!3m2!1ses-419!2sar!4v1659815295174!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-    
-           
+            </div>            
+        
         </article>
     </section>
-
-    <!--footer con datos y redes de la empresa y un enlace a contaco-->
-    <footer>
+        
+        <!--footer con datos y redes de la empresa y un enlace a contaco-->
+        <footer>
         <img src="./img/polo-logo-mini.png" alt="polo logo">
         <p class="footer">copyrigth polo norte srl</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque cupiditate tempora necessitatibus iusto. Amet maiores ea reiciendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, quos.</p>
         <a href="#">instagram</a>
@@ -196,7 +228,7 @@
         <a href="#">ayuda</a>
         <a href="./paginas/contacto.html">contacto</a>
     </footer>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 
 </html>

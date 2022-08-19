@@ -1,5 +1,5 @@
 /* reset */
-*                           {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,15 +8,16 @@
 body { 
     background-image: url(../img/backg-nieve.jpg);
 }
-
 header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     background-image: url(../img/polo-head.jpeg);
-    background-size: contain;    
-    animation-duration: 1s;
+    background-size: contain;
+    animation-duration: .7s;
     animation-name: aparecer-head;
+    height: 190px;
+}
+header.container-fluid.row{
+    margin: 0;
+    flex-wrap: nowrap;   
 }
 @keyframes aparecer-head{
     0%{
@@ -29,15 +30,15 @@ header{
 }
 /* Logo */
 header img{ 
-    height: 150px; width: auto;
+    height: 100%; width: auto;
     
 }
 
 /* Titulos HEADER */
 h1{
     font-family: 'Koulen', cursive;
-    font-size: 60px;
-    text-align: center;
+    font-size: 80px;
+    margin-top: 2%;
 }
 
 .title h2{
@@ -70,22 +71,17 @@ h1{
 } 
 
 /* modificaciones Barra NAV */
-.menu{
-    display: none;
-}
-nav { 
+.navbar { 
+    z-index: 1;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: 40px;
+    flex-wrap: nowrap;
     background-color: #225EA3;
     position: sticky;
     top: 0;
-    z-index: 2;
-    margin-bottom: 5px;
     animation-name: aparecer-nav;
     animation-duration: 1.3s;
 }
+
 @keyframes aparecer-nav{
     0%{
         transform: translateY(-200%);
@@ -95,90 +91,65 @@ nav {
         opacity: 1;
     }
 }
-ul {
-    width: 70%;
-    margin-left: 5%;
-    font-family: 'koulen', cursive;
-    font-size: larger;
-    list-style: none;
+.navbar-nav{
+    justify-content: space-between;
 }
-
-li{
-    display: inline-block;
-    width: 20%;
-    color: #D3E1F2;
-}
-
-li a{
-    text-decoration: none;
-    color: #D3E1F2;
-}
-
-li a:hover{
-    color:red;
-}
-
-ul ul{
-    width: 15%;
-    padding: auto 70px;
-    position: absolute;
-    display: none;
-    background-color: #225EA3;
-    z-index: 2;
-}
-
-ul ul li{
-    display: block;
-    padding-inline: 20px;
-}
-
-ul li:hover ul{
-    display: block;
+.navbar ul{
+    width: 90%;
+    margin-left: 1%;
 }
 /* boton busqueda y carrito */
+.boton:hover{
+    color: red;
+    transform: scale(1.1);  
+} 
 .boton{
-    margin-top: 4px;
     margin-right: 10px;
+    border-radius: 10px;
+    height: 40px;
+    width: 60px;
+    background: white; 
 }
 .boton i{
-    height: 30px;
-    width: 30px;
-    border: 3px solid black;
-    border-radius: 10px;
-    background: white; 
-    text-align: center;
-    padding-top: 3px;  
+    font-size: 20px;
 }
-.boton a{
-    text-decoration: none;
-    color: black;
-}
-.boton i:hover{
-    color: red;
-    transform: scale(1.2);  
-}
-.boton input{
-    border: 3px solid black;
-    border-radius: 5px;
-    background: white; 
 
-} 
-/* desfile productos tipo carrusel */
-marquee{
-    padding-bottom: 7px;
+ul {
+    font-family: 'koulen', cursive;
+    font-size:large;
 }
-marquee img{
-    position: relative;
-    z-index: 1;
-    height: 200px;
-    width: 200px;
-    margin: 10px 60px;
-    border: 5px solid #225EA3;
+.navbar a{
+    color: #D3E1F2;
+    font-size: 23px;
+}
+.navbar a:hover{
+    color:red
+}
+.dropdown-menu{
+    background-color: #225EA3;
+}
+/* desfile productos tipo carrusel */
+.carousel-inner{
+    height: 80vh;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: #225EA3;
+    border: 5px solid #fff;
+    border-radius: 40%;
+    height: 4rem;
+    width: 3rem;
+}
+.topventa{
+    background: #225EA3;
+}
+.topventa img{
+    margin: 2%;
+    border: 5px solid rgb(89, 203, 241) ;
     border-radius: 15px;
     transition: 0.5s;
 }
-marquee img:hover{
-    border: 10px double #485aff ;
+.topventa img:hover{
+    border: 10px double rgb(89, 203, 241) ;
     transform:scale(1.1);
     box-shadow: 10px 15px rgba(0, 0, 0, 0.534);
 }
@@ -204,43 +175,21 @@ h2{
 
 /* articles */
 article p{
+    margin: 1%;
     font-size: 19px;
     border: 10px solid #225EA3;
     border-radius: 15px;
     background-image: radial-gradient(rgba(102, 195, 226, 0.753), rgba(255, 255, 255, 0.87));
-    margin: 10px 50px 50px;
 }
-/* video youtube home y servicios FLEX */
-.iframe-vid{
-    margin-top: 1%;
-    padding: 1%;
-    display: flex;
-    justify-content: center;
-}
-iframe{
+/* video youtube home y servicios */
+
+.vid-industria{
     width: 100vh;
+    height: 60vh;
 }
-/* tabla sucursales GRID */
-.sucursal{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 2fr 2fr;
-    grid-template-areas:
-        "h2 h2"
-        "tabla mapa"
-        "tabla mapa";
-    grid-column-gap: 20px;
-    grid-row-gap: 10px;
-    margin-bottom: 25px ;
-    margin-inline: 40px;
-}
-
-.sucursal h2{
-    grid-area: h2;
-}
-
-.tabla{
-    grid-area: tabla;
+/* tabla sucursales */
+.table{
+    margin-left: 50px;
     text-align: center;
     border: 5px dashed #225EA3;
     border-radius: 15px;
@@ -255,6 +204,7 @@ iframe{
     height: 450px;
     width: 100vh;
     overflow: hidden;
+    margin-bottom: 15px;
 }
 #map1, #map2, #map3, #map4{
     border-radius: 15px;
@@ -383,8 +333,6 @@ h3{
         transform: translateX(0%);
         transform:rotatez(1150deg);
     }
-
-
 }
 .preg a{
     color: black;
@@ -395,39 +343,26 @@ h3{
     margin-inline: 20%;
 }
 /* modificaciones formulario */
-form{
-    display: grid;
-    grid-template-columns: 40vh 60vh;
-    justify-content: center;
-}
+
 fieldset{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
     border: 5px solid #225EA3;
     height: 400px;
-    width: 700px;
+    width: 800px;
     font-size: 32px;
     font-family: 'koulen', cursive;
     text-align: center;
     margin-inline: 10%;
 }
-.inputs{
-    display: flex;
-    flex-direction: column;
-}
-
-.input-con{
-    margin: 10px;
-   
+.btn-primary{
+    margin-inline: 100%;
 }
 textarea{
-   
-    height: 250px;
-    width: 300px;
+    height: 60%;
 }
+
                                 /* PAGINA PRODUCTOS  */
 main{
+    height: 100%;
     padding-top:30px;
     padding-inline: 20px;
     display: grid;
