@@ -7,6 +7,12 @@ $f-clara:#D3E1F2;
 $azul:#225EA3;
 $gradient:radial-gradient(rgba(102, 195, 226, 0.753), rgba(255, 255, 255, 0.87));
 
+// MIXINS   
+@mixin titulos ($family, $size){
+    font-family: $family;
+    font-size: $size;
+    text-align: center;
+}
 
 /* reset */
 * {
@@ -39,15 +45,12 @@ header {
     
     /* Titulos HEADER */
     h1 {
-        font-family: $titles;
-        font-size: 80px;
-        margin-top: 2%;
+        @include titulos ($titles, 80px)
+        
     }
     
     h2 {
-        font-family: $parraf;
-        font-size: 30px;
-        text-align: center;
+        @include titulos ($parraf, 40px)
     }
     /* Logo */
     img {
@@ -163,13 +166,15 @@ header {
     height: 80vh;
 }
 
-.carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: $azul;
     border: 5px solid #fff;
     border-radius: 40%;
     height: 4rem;
     width: 3rem;
+}
+.carousel-control-prev-icon{
+    @extend .carousel-control-next-icon;
 }
 
 .topventa {
@@ -200,9 +205,7 @@ header {
 /* titulos H2 en general */
 h2 {
 
-    font-family: $titles;
-    font-size: 9vh;
-    text-align: center;
+    @include titulos($titles, 9vh);
     text-decoration: underline;
     animation-name: sacudida;
     animation-duration: 1.5s;
@@ -268,13 +271,19 @@ article p {
     margin-bottom: 15px;
 }
 
-#map1,
-#map2,
-#map3,
-#map4 {
+#map1 {
     border-radius: 15px;
     position: absolute;
     display: none;
+}
+#map2{
+    @extend #map1
+}
+#map3{
+    @extend #map1
+}
+#map4{
+    @extend #map1
 }
 
 #map1:target,

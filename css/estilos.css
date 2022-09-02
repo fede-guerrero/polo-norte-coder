@@ -42,11 +42,11 @@ header {
 header h1 {
   font-family: "Koulen", cursive;
   font-size: 80px;
-  margin-top: 2%;
+  text-align: center;
 }
 header h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
 }
 header img {
@@ -155,8 +155,7 @@ header header.container-fluid.row {
   height: 80vh;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
+.carousel-control-next-icon, .carousel-control-prev-icon {
   background-color: #225EA3;
   border: 5px solid #fff;
   border-radius: 40%;
@@ -257,10 +256,7 @@ article p {
   margin-bottom: 15px;
 }
 
-#map1,
-#map2,
-#map3,
-#map4 {
+#map1, #map4, #map3, #map2 {
   border-radius: 15px;
   position: absolute;
   display: none;
@@ -339,7 +335,6 @@ footer img {
   filter: sepia(100%);
   transition: 0.5s;
 }
-
 .img:hover {
   transform: scale(1.1);
   filter: sepia(0%);
@@ -350,56 +345,54 @@ footer img {
 .img1 {
   grid-area: img1;
   height: 300px;
-  background-image: url(../img/salmon1.png);
-  background-position: center;
+  background-image: url(../img/img1.jpg);
   background-size: cover;
 }
 
 .img2 {
   grid-area: img2;
   height: 300px;
-  background-image: url(../img/viejo-confrio.jpg);
-  background-position: 25%;
+  background-image: url(../img/img2.jpg);
   background-size: cover;
 }
 
 .img3 {
   grid-area: img3;
-  height: 606px;
-  background-image: url(../img/l.jpg);
-  background-position: center;
+  height: 300px;
+  background-image: url(../img/img3.jpg);
   background-size: cover;
 }
 
 .img4 {
   grid-area: img4;
   height: 300px;
-  background-image: url(../img/almacen.jpg);
-  background-position: center;
+  background-image: url(../img/img4.jpg);
   background-size: cover;
 }
 
 .img5 {
   grid-area: img5;
-  background-image: url(../img/alimentos-congelados.jpg);
-  height: 606px;
-  background-position: center;
+  height: 300px;
+  background-image: url(../img/img5.jpg);
   background-size: cover;
 }
 
 .img6 {
   grid-area: img6;
   height: 300px;
-  background-image: url(../img/salmon2.jpg);
+  background-image: url(../img/img6.jpg);
   background-size: cover;
 }
 
 .img7 {
   grid-area: img7;
   height: 300px;
-  background-image: url(../img/cadena-frio.jpg);
-  background-position: center;
+  background-image: url(../img/img7.jpg);
   background-size: cover;
+}
+
+.img3, .img5 {
+  height: 100%;
 }
 
 /* PAGINA CONTACTO */
