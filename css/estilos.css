@@ -724,4 +724,11 @@ main {
   .img5 {
     height: 404px;
   }
+}
+@media only screen and (max-width: 450px) {
+  .prod {
+    display: flex;
+    justify-items: center;
+    align-items: stretch;
+  }
 }/*# sourceMappingURL=estilos.css.map */

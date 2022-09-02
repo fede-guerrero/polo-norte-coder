@@ -296,3 +296,10 @@
     }
 
 }
+@media only screen and (max-width:450px){
+    .prod {
+        display: flex;
+        justify-items: center;
+        align-items: stretch;
+    }
+}
