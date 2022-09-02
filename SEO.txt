@@ -1,0 +1,10 @@
+modificaciones SEO aplicadas:
+
+- etiquetas meta aplicadas en cada pagina tanto descripcion 
+como palabras claves correspondientes a cada contenido variando en cada pagina
+diferenciando secciones
+
+- completado de etiquetas "alt" en imagenes
+
+- titulos encabezado h1 resaltando nombre de la empresa en el header en todas las paginas
+ 
