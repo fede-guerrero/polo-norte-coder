@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Polo Norte es una empresa distribuidora de alimentos congelados, pescados, mariscos y prefritos de alta calidad lider en la region NOA">
+  <meta name="keywords" content="distribuidora, alimentos congelados, pescados, mariscos, congelados, fruta congelada, salta, jujuy, tucuman">
+  <title>polo norte</title>
+  <link rel="shortcut icon" href="img/polo-logo-mini.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+  <header class="container-fluid row">
+    <!-- LOGO -->
+    <div class="col-4">
+      <a href="#"> <img src="./img/polo-logo-mini.png" alt="polo-logo"> </a>
+    </div>
+
+    <!-- TITULOS -->
+    <div class="title col-5 text-center justfy-center">
+      <h1> polo norte </h1>
+      <h2> alimentos congelados</h2>
+    </div>
+
+    <!-- BOTON REDES -->
+    <div class="redes col-3 text-end">
+
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-solid fa-info"></i></a>
+
+    </div>
+  </header>
+
+  <!--barra de navegacion con areas principales de la pagina y menu desplegable en productos-->
+  <nav class="navbar navbar-expand-md">
+    <div class="desplegable container-fluid align-items-start">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Productos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./paginas/mariscos.html">Mariscos</a></li>
+              <li><a class="dropdown-item" href="./paginas/pescados.html">Pescados</a></li>
+              <li><a class="dropdown-item" href="./paginas/rebozados.html">Rebozados</a></li>
+              <li><a class="dropdown-item" href="./paginas/fruta.html">Fruta</a></li>
+          </li>
+        </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="./paginas/servicios.html">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./paginas/contacto.html">Contacto</a>
+        </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid justify-content-end">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="boton" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="boton"><i class="fa-solid fa-cart-shopping"></i></button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- carrusel posta boost -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./img/img5.jpg" class="d-block w-100 img-fluid" alt="produccion alimentos">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/img1.jpg" class="d-block w-100 img-fluid" alt="nuestra fabrica">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/control.jpg" class="d-block w-100 img-fluid" alt="control alimentos">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/img7.jpg" class="d-block w-100 img-fluid" alt="transporte frio">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <section class="container-fluid">
+    <div class="row">
+      <!-- nueva seccion de productos vendidos (?) -->
+      <aside class=" topventa d-flex flex-column align-items-center col-12 col-sm-3 ">
+        <h3 class="mt-3">Mas vendidos</h3>
+        <div class="top-product d-flex flex-row flex-sm-column mb-1">
+          <a href="./paginas/pescados.html"><img src="./img/dorado.jpeg" alt="dorado"></a>
+          <a href="./paginas/mariscos.html"><img src="./img/camaron.jpeg" alt="camarones"></a>
+          <a href="./paginas/fruta.html"><img src="./img/frutilla.jpeg" alt="frutilla congelada"></a>
+          <a href="./paginas/rebozados.html"><img src="./img/patitas.jpeg" alt="patitas pollo"></a>
+          <a href="./paginas/fruta.html"><img src="./img/kiwi.jpeg" alt="kiwi congelado"></a>
+          <a href="./paginas/rebozados.html"><img src="./img/finas-hierbas.jpeg" alt="milaneza merluza"></a>
+        </div>
+      </aside>
+
+      <!--descripcion de la empresa y trayectoria-->
+      <article class="home1 d-flex justify-content-between flex-column col-12 col-sm-9">
+        <h2 class="mt-3"> sobre nosotros</h2>
+        <p><strong>POLO NORTE</strong> nace a comienzos de la década del 90     comercializando productos de la marca Bammi, rebozadores, pan rallado y grisines. Distribuyendo en granjas, fábricas de pastas, casas de comidas y restaurantes en Salta capital y ciudades cercanas.
+
+          Iniciada como una empresa familiar, hemos mantenido un constante crecimiento incorporando nuevos productos: especias, condimentos, integrales, sabores y complementos. Además hemos agregado la distribución de productos congelados elaborados con pollo y pescado, papas prefritas en distintas variedades, pizzas y vegetales. Para que esto sea posible, se incorporaron cámaras de frío y vehículos que cumplen con todas las normas bromatológicas requeridas para garantizar la calidad de los productos entregados.
+          
+          En la actualidad contamos con personal altamente capacitado y una flota de vehículos acorde a la expansión desarrollada. Podemos ofrecer una completa estructura que incluye la atención telefónica previa, asesoramiento técnico, venta y entrega puntual de cada uno de nuestros productos.
+          Todo esto no pudo ser posible sin nuestros clientes, por lo tanto, cada uno de ellos es en definitiva nuestra razón de ser. 
+          <br> <br>
+          Somos una empresa líder en el mercado interno argentino, que ha logrado un crecimiento sostenido del 20% durante los últimos años. Nuestras metas se vuelven más ambiciosas cada día, consiguiendo una fuerte presencia en el mercado de exportación, respaldada por la alta calidad de nuestros productos.
+
+          Actualmente ofrecemos al mercado interno y externo productos alimenticios de alto valor agregado fabricados con tecnología de punta en el país, combinando tradición e innovación.
+
+          La principal característica es el elevado Standard en el control de la frescura de la materia prima, complementada con un proceso confiable y el personal capacitado, logrando así un producto final con la máxima calidad.
+          <br> <br>
+          A partir de la implementación del sistema de calidad, desde los centros de producción hasta el último eslabón administrativo, se ha conseguido alcanzar los objetivos más ambiciosos en lo que respecta a la calidad de nuestros productos.
+          La empresa cuenta con certificación FSSC 22000,   además de planes BPM y HACCP y permisos para exportar a los mercados más exigentes tales como Comunidad europea, MERCOSUR, USA y Medio Oriente, entre otros.
+          Para obtener más información puede visitar los sitios <strong>www.cisq.com</strong>  y  <strong>www.iqnet-certification.com</strong> </p>
+        <!--video proceso industrial-->
+
+        <iframe class="vid-industria align-self-center mw-100 mb-3" src="https://www.youtube.com/embed/JWrYzq1yGZo"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </article>
+    </div>
+
+    <!--distintas sucursales NOA en un cuadro con ubicacion-->
+    <article class="sucursal container-fluid row">
+
+      <h2 class="mt-3">Sucursales NOA</h2>
+      <div class="col-12 offset-lg-1 col-lg-2">
+
+        <table cellspacing="10" cellpading="10" class="table table-info">
+          <tr>
+            <th>Salta</th>
+            <th>Jujuy</th>
+            <th>Tucuman</th>
+            <th>Catamarca</th>
+          </tr>
+          <tr>
+            <td>Salta capital</td>
+            <td>San pedro</td>
+            <td>Lules</td>
+            <td>San fernando</td>
+          </tr>
+          <tr>
+            <td><a href="#map1">leguizamon 1570</a></td>
+            <td> <a href="#map2">7 de noviembre 102</a> </td>
+
+            <td><a href="#map3">RP301 km 20</a></td>
+            <td><a href="#map4">Enrique ocampo 3100</a></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="mapa offset-lg-2 col-12 col-sm-6">
+        <iframe class="mapa" id="map1"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.3727840117704!2d-65.4238818!3d-24.7826855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc3b5b8cb1b3f%3A0x866001f47762bebb!2sLeguizam%C3%B3n%201570%2C%20Salta!5e0!3m2!1ses-419!2sar!4v1659707469951!5m2!1ses-419!2sar"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <iframe class="mapa" id="map2"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3638.17944599156!2d-64.8841439!3d-24.235501799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941a5813731ae84d%3A0x1f51b496af0ee97!2sAv.%207%20De%20Noviembre%2C%20Jujuy!5e0!3m2!1ses-419!2sar!4v1659811774423!5m2!1ses-419!2sar"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <iframe class="mapa" id="map3"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7114.939824309661!2d-65.33345959414301!3d-26.92031346445156!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942245b4394b1f5d%3A0x8083c7fc5c68f9fd!2sAlif%20Agro%20-%20Oficinas%2C%20Industria%20IQF%20y%20Centro%20Log%C3%ADstico!5e0!3m2!1ses-419!2sar!4v1659815156846!5m2!1ses-419!2sar"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <iframe class="mapa" id="map4"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.3184778238324!2d-65.82244285980222!3d-28.469953999353258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94242868aadba79f%3A0xfbaa953d371d6a!2sAv.%20Enrique%20Ocampo%203100%2C%20San%20Fernando%20del%20Valle%20de%20Catamarca%2C%20Catamarca!5e0!3m2!1ses-419!2sar!4v1659815295174!5m2!1ses-419!2sar"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </article>
+  </section>
+
+  <!--footer con datos y redes de la empresa y un enlace a contaco-->
+  <footer>
+    <img src="./img/polo-logo-mini.png" alt="polo logo">
+    <p class="footer">copyrigth polo norte srl</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque cupiditate tempora necessitatibus iusto. Amet
+      maiores ea reiciendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, quos.</p>
+    <a href="#">instagram</a>
+    <a href="#">facebook</a>
+    <a href="#">ayuda</a>
+    <a href="./paginas/contacto.html">contacto</a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
