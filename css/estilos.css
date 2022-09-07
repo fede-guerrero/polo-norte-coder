@@ -13,6 +13,7 @@ body {
 header {
   background-image: url(../img/polo-head.jpeg);
   background-size: contain;
+  margin-inline: 0 !important;
   -webkit-animation-duration: 0.7s;
           animation-duration: 0.7s;
   -webkit-animation-name: aparecer-head;
@@ -142,12 +143,12 @@ header header.container-fluid.row {
   width: 60px;
   background: white;
 }
-.boton i {
-  font-size: 20px;
-}
-.boton :hover {
+.boton:hover {
   color: red;
   transform: scale(1.1);
+}
+.boton i {
+  font-size: 20px;
 }
 
 /* desfile productos tipo carrusel */
@@ -446,7 +447,7 @@ main {
 .prod {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
   padding: 5px;
   border: 5px solid #225EA3;
@@ -487,6 +488,22 @@ main {
   border-radius: 5px;
   height: 25px;
   width: 30%;
+}
+.prod i {
+  margin: 2px;
+  padding: 5px;
+  height: 36px;
+  width: 40px;
+  border: 3px solid black;
+  border-radius: 10px;
+  background: white;
+  font-size: 20px;
+}
+.prod i:hover {
+  border: 3px solid #225EA3;
+  color: red;
+  transform: scale(1.1);
+  box-shadow: 10px 15px rgba(0, 0, 0, 0.634);
 }
 
 @media only screen and (max-width: 768px) {

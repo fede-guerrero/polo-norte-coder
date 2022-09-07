@@ -28,6 +28,7 @@ body {
 header {
     background-image: url(../img/polo-head.jpeg);
     background-size: contain;
+    margin-inline: 0 !important;
     animation-duration: .7s;
     animation-name: aparecer-head;
     height: auto;
@@ -148,15 +149,16 @@ header {
     height: 40px;
     width: 60px;
     background: white;
-
+    
+    &:hover {
+            color: red;
+            transform: scale(1.1);
+        }
+    
     i {
         font-size: 20px;        
     }
 
-:hover {
-        color: red;
-        transform: scale(1.1);
-    }
 
 
 }
