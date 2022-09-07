@@ -1,0 +1,324 @@
+@import url(https://fonts.googleapis.com/css2?family=Koulen&display=swap);
+
+// VARIANTES
+$titles: 'Koulen', cursive;
+$parraf: Verdana, Geneva, Tahoma, sans-serif;
+$f-clara:#D3E1F2;
+$azul:#225EA3;
+$gradient:radial-gradient(rgba(102, 195, 226, 0.753), rgba(255, 255, 255, 0.87));
+
+// MIXINS   
+@mixin titulos ($family, $size){
+    font-family: $family;
+    font-size: $size;
+    text-align: center;
+}
+
+/* reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/backg-nieve.jpg);
+}
+
+header {
+    background-image: url(../img/polo-head.jpeg);
+    background-size: contain;
+    animation-duration: .7s;
+    animation-name: aparecer-head;
+    height: auto;
+    
+    @keyframes aparecer-head {
+        0% {
+            transform: translatey(-100%);
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    /* Titulos HEADER */
+    h1 {
+        @include titulos ($titles, 80px)
+        
+    }
+    
+    h2 {
+        @include titulos ($parraf, 40px)
+    }
+    /* Logo */
+    img {
+        height: 12rem;
+        width: auto;
+    
+    }
+        
+    // MARGEN DEL HEAD
+    header.container-fluid.row {
+        margin: 0;
+        flex-wrap: nowrap;
+    }
+    
+}
+
+.redes{
+    display: flex;
+    flex-direction:column;
+
+    i {
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 22px;
+    }
+ 
+    i:hover {
+        color: red;
+        transform: scale(1.2);
+        background-image: $gradient;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+}
+
+/* modificaciones Barra NAV */
+.navbar {
+    z-index: 100;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: $azul;
+    position: sticky;
+    top: 0;
+    animation-name: aparecer-nav;
+    animation-duration: 1.3s;
+    
+    @keyframes aparecer-nav {
+        0% {
+            transform: translateY(-200%);
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+
+    ul {
+        font-family:$titles;
+        font-size: large;
+        justify-content: space-between;
+        width: 90%;
+        margin-left: 1%;
+    }
+    
+    a {
+        color: $f-clara;
+        font-size: 23px;
+        
+    }
+    
+    :hover {
+        color: red
+    }    
+    
+}
+
+.dropdown-menu {
+    background-color: $azul;
+}
+
+/* boton busqueda y carrito */
+.boton {
+    margin-right: 10px;
+    border-radius: 10px;
+    height: 40px;
+    width: 60px;
+    background: white;
+
+    i {
+        font-size: 20px;        
+    }
+
+:hover {
+        color: red;
+        transform: scale(1.1);
+    }
+
+
+}
+
+/* desfile productos tipo carrusel */
+.carousel-inner {
+    height: 80vh;
+}
+
+.carousel-control-next-icon {
+    background-color: $azul;
+    border: 5px solid #fff;
+    border-radius: 40%;
+    height: 4rem;
+    width: 3rem;
+}
+.carousel-control-prev-icon{
+    @extend .carousel-control-next-icon;
+}
+
+.topventa {
+    background: $azul;
+    
+    h3 {
+        font-family: $titles;
+        color: $f-clara;
+    }
+    
+    img {
+        height: 35vh;
+        width: 35vh;
+        margin: 2%;
+        margin-bottom: 5%;
+        border: 5px solid rgb(89, 203, 241);
+        border-radius: 15px;
+        transition: 0.5s;
+    }
+    
+    img:hover {
+        border: 10px double rgb(89, 203, 241);
+        transform: scale(1.1);
+        box-shadow: 10px 15px rgba(0, 0, 0, 0.534);
+    }
+}
+
+/* titulos H2 en general */
+h2 {
+
+    @include titulos($titles, 9vh);
+    text-decoration: underline;
+    animation-name: sacudida;
+    animation-duration: 1.5s;
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+    
+    @keyframes sacudida {
+    
+        10%,
+        30%,
+        50%,
+        70%,
+        90% {
+            transform: translateX(-20px);
+        }
+    
+        20%,
+        40%,
+        60%,
+        80%,
+        100% {
+            transform: translateX(20px);
+        }
+    }
+}
+
+/* articles */
+article p {
+    font-family: $parraf;
+    margin: 1%;
+    font-size: 19px;
+    border: 10px solid $azul;
+    border-radius: 15px;
+    background-image: $gradient;
+}
+
+/* video youtube home y servicios */
+.vid-industria {
+    width: 100vh;
+    height: 60vh;
+}
+
+/* tabla sucursales */
+.sucursal.container-fluid.row {
+    margin: 0%;
+}
+
+.table {
+    text-align: center;
+    border: 5px dashed $azul;
+    border-radius: 15px;
+    background-image: $gradient;
+}
+
+.mapa {
+    background-image: url(../img/back-ubicacion.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    grid-area: mapa;
+    height: 450px;
+    width: 100vh;
+    margin-bottom: 15px;
+}
+
+#map1 {
+    border-radius: 15px;
+    position: absolute;
+    display: none;
+}
+#map2{
+    @extend #map1
+}
+#map3{
+    @extend #map1
+}
+#map4{
+    @extend #map1
+}
+
+#map1:target,
+#map2:target,
+#map3:target,
+#map4:target {
+    display: block;
+}
+
+/* foter */
+footer {
+    margin-top: 20px;
+    position: relative;
+    background-color: $azul;
+    text-decoration: solid black;
+    text-align: center;
+    color: $f-clara;
+    
+    a {
+        color: $f-clara;
+        display: inline;
+        text-decoration: underline solid red;
+        width: 25%;
+    }
+    
+    img {
+        height: 50px;
+        width: auto;
+        display: inline;
+        position: relative;
+    }
+}
+
+@import "_servicios";
+@import "_contacto";
+@import "_productos";
+@import "_media-q";
+

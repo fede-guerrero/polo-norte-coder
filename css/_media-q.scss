@@ -1,0 +1,305 @@
+@media only screen and (max-width: 768px) {
+    header{
+        h1{
+        font-size: 11vh;
+        }
+        
+        h2{
+        display: none;
+        }
+        
+        img{
+        height: 27vh;
+        width: auto;
+        }
+    } 
+    .sucursal{
+        justify-content: center;
+    }
+    
+    /* BOTONES REDES */
+     .redes {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        
+        i {
+            margin: 5px;
+            height: 40px;
+            width: 40px;
+            border: 3px solid black;
+            border-radius: 10px;
+            background: white;
+            text-align: center;
+            padding-top: 3px;
+            font-size: 25px;
+        }
+    }
+
+    .carousel-inner{
+        height: 51vh;
+    }
+    .topventa img {
+        margin-inline: 10px;
+        height: 25vh;
+        width: 25vh;
+    }
+    article p {
+        height: 80vh;
+        overflow: auto;
+    }
+
+    .mapa {
+        width: 90%;
+    }
+
+    /* parte contacto */
+    .preg h3{
+        font-size: 7vh;
+    }
+    .pagos-img {
+        width: 100%;
+        margin: 0%;
+    }
+
+    form {
+        justify-content: start;
+    }
+
+    fieldset {
+        margin-inline: 10%;
+    }
+
+    /*  PRODUCTOS */
+    h3 {
+        font-size: 4vh;
+    }
+
+    h2 {
+        font-size: 8vh;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+}
+
+@media only screen and (max-width:576px) {
+
+    header{
+
+        img {
+            margin-top: 10px;
+            height: 130px;
+        }
+    
+        h1 {
+            display: none;
+        }
+    
+    } 
+        
+    // BOTONES REDES
+    .redes {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        
+        i {
+            margin: 5px;
+            height: 30px;
+            width: 30px;
+            border: 3px solid black;
+            border-radius: 10px;
+            background: white;
+            text-align: center;
+            padding-top: 3px;
+            font-size: 18px;
+        }
+    }
+
+
+    /* navbar */
+    .desplegable {
+        flex-direction: column;
+    }
+
+    /* carousel */
+    .carousel-inner {
+        height: 39vh;
+    }
+
+    /* top ventas  */
+    .top-product {
+        width: 100%;
+        overflow: auto;
+    }
+
+    .topventa img {
+        margin-inline: 10px;
+        height: 23vh;
+        width: 23vh;
+    }
+
+    article p {
+        height: 80vh;
+        overflow: auto;
+    }
+
+    /* TABLA Y MAPAS HOME */
+    .sucursal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mapa {
+        width: 100%;
+    }
+
+    #map1,
+    #map2,
+    #map3,
+    #map4 {
+        width: 400px;
+    }
+
+    /* PRODUCTOS RESP */
+
+    main {
+        padding-top: 10px;
+        padding-inline: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .prod {
+        display: grid;
+        justify-items: center;
+        align-items: stretch;
+        grid-template-columns: 43% 57%;
+        grid-template-rows: 1fr 2fr 1fr;
+        border: 5px solid $azul;
+        border-radius: 10px;
+        background-image: $gradient;
+        h3 {
+            grid-column: 2/2;
+            grid-row: 1/3;
+        }
+    
+        p {
+            margin-inline: 10px;
+            grid-column: 2/2;
+            grid-row: 2/3;
+        }
+    
+        img {
+            grid-column: 1/2;
+            grid-row: 1/4;
+            height: 220px;
+            width: 180px;
+        }
+    
+        input {
+            display: flex;
+            flex-direction: column;
+            grid-column: 2/3;
+            grid-row: 3/3;
+            height: 25px;
+            width: 60%;
+        }
+    
+        label {
+            display: none;
+        }
+    }
+
+
+    /*CONTACTO RESPONS  */
+    .preg {
+
+        p {
+            display: none;
+        }
+        
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        a:hover {
+        color: red;
+        transform: scale(1.1);
+        text-shadow: turquoise;
+        }
+    }
+    
+    #preg1:target,
+    #preg2:target,
+    #preg3:target,
+    #preg4:target {
+        display: block;
+    }
+
+    .pagos-img {
+        margin: 0;
+        width: 80vh;
+    }
+
+    /* FORMULARIO */
+    form {
+        display: block;
+        align-items: center;
+    }
+
+    fieldset {
+        margin: 2%;
+        height: 100%;
+        width: 90vh;
+        border: 5px solid $azul;
+        font-size: 20px;
+        font-family: $titles;
+        text-align: center;
+        align-items: center;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    /* GALERIA SERVICIOS */
+    .galeria {
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "img1 img1 img3"
+            "img4 img4 img4"
+            "img5 img6 img6"
+            "img5 img2 img2"
+            "img7 img7 img7";
+        gap: 5px;
+        border: 10px solid $azul;
+        border-radius: 10px;
+        background-image: $gradient;
+        margin-top: 10px;
+    }
+
+    .img {
+        height: 200px;
+    }
+
+    .img5 {
+        height: 404px;
+    }
+
+}
+@media only screen and (max-width:450px){
+    .prod {
+        display: flex;
+        justify-items: center;
+        align-items: stretch;
+    }
+}

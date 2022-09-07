@@ -1,0 +1,37 @@
+/* PAGINA CONTACTO */
+/* subtitulos h3 */
+h3 {
+    font-family: $titles;
+    font-size: 6vh;
+    text-align: center;
+}
+
+.preg a {
+    color: black;
+    text-decoration: none;
+}
+
+.pagos-img {
+    display: inline-block;
+    margin-inline: 20%;
+}
+
+/* modificaciones formulario */
+
+fieldset {
+    border: 5px solid $azul;
+    height: 400px;
+    width: 800px;
+    font-size: 32px;
+    font-family: $titles;
+    text-align: center;
+    margin-inline: 10%;
+}
+
+.btn-primary {
+    margin-inline: 100%;
+}
+
+textarea {
+    height: 60%;
+}
