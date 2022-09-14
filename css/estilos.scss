@@ -6,6 +6,7 @@ $parraf: Verdana, Geneva, Tahoma, sans-serif;
 $f-clara:#D3E1F2;
 $azul:#225EA3;
 $gradient:radial-gradient(rgba(102, 195, 226, 0.753), rgba(255, 255, 255, 0.87));
+$border-bot: 3px solid black;
 
 // MIXINS   
 @mixin titulos ($family, $size){
@@ -76,19 +77,20 @@ header {
     margin: 10px;
     height: 40px;
     width: 40px;
-    border: 3px solid black;
+    border: $border-bot;
     border-radius: 10px;
     background: white;
     text-align: center;
     padding-top: 5px;
     font-size: 22px;
+    
+        &:hover{
+            transform: scale(1.2) rotate(25deg);
+            box-shadow:10px 15px rgba(0, 0, 0, 0.534);
+            color: cadetblue;
+        }
     }
  
-    i:hover {
-        color: red;
-        transform: scale(1.2);
-        background-image: $gradient;
-    }
     a {
         text-decoration: none;
         color: black;
@@ -181,7 +183,7 @@ header {
 
 .topventa {
     background: $azul;
-    
+    border-bottom-right-radius:  10px ;
     h3 {
         font-family: $titles;
         color: $f-clara;
@@ -209,29 +211,6 @@ h2 {
 
     @include titulos($titles, 9vh);
     text-decoration: underline;
-    animation-name: sacudida;
-    animation-duration: 1.5s;
-    animation-iteration-count: 2;
-    animation-delay: 2s;
-    
-    @keyframes sacudida {
-    
-        10%,
-        30%,
-        50%,
-        70%,
-        90% {
-            transform: translateX(-20px);
-        }
-    
-        20%,
-        40%,
-        60%,
-        80%,
-        100% {
-            transform: translateX(20px);
-        }
-    }
 }
 
 /* articles */
@@ -298,24 +277,35 @@ article p {
 /* foter */
 footer {
     margin-top: 20px;
-    position: relative;
-    background-color: $azul;
+    background-image: url(../img/footer-back.jpg);
+    background-size: contain;
     text-decoration: solid black;
     text-align: center;
-    color: $f-clara;
+    color: black;
     
+    i{
+        border: $border-bot;
+        border-radius: 10px;
+        background-color: $f-clara;
+        margin: 5px;
+        padding: 2px;
+        font-size: 30px;
+        height: 40px;
+        width: 40px;
+        
+        &:hover{
+            transform: scale(1.2) rotate(25deg);
+            box-shadow:10px 15px rgba(0, 0, 0, 0.534);
+            color: rgb(17, 121, 124);
+        }
+    }
     a {
-        color: $f-clara;
-        display: inline;
-        text-decoration: underline solid red;
-        width: 25%;
+        color: black;
+        text-decoration:none
     }
     
     img {
-        height: 50px;
-        width: auto;
-        display: inline;
-        position: relative;
+        height: 120px;
     }
 }
 
