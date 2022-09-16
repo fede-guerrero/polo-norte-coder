@@ -198,6 +198,7 @@ h2 {
 /* articles */
 article p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 2%;
   margin: 1%;
   font-size: 19px;
   border: 10px solid #225EA3;
@@ -397,7 +398,7 @@ h3 {
 
 .pagos-img {
   display: inline-block;
-  margin-inline: 20%;
+  padding-inline: 20%;
 }
 
 /* modificaciones formulario */
@@ -545,7 +546,7 @@ main {
   }
   .pagos-img {
     width: 100%;
-    margin: 0%;
+    padding: 0;
   }
   form {
     justify-content: start;
@@ -688,7 +689,6 @@ main {
     display: block;
   }
   .pagos-img {
-    margin: 0;
     width: 80vh;
   }
   /* FORMULARIO */
